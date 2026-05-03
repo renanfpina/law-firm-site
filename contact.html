@@ -1,21 +1,265 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="" />
-  <title>Contato | Law Firm</title>
+  <meta name="description" content="Contact Langford & Associates. Schedule a confidential consultation with our corporate attorneys in New York." />
+  <meta property="og:title" content="Contact Us | Langford & Associates" />
+  <meta property="og:description" content="Schedule a confidential consultation with our corporate attorneys." />
+  <meta property="og:type" content="website" />
+  <title>Contact Us | Langford &amp; Associates</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header id="site-header" class="site-header" role="banner"></header>
 
-  <main>
-    <!-- Contact Form -->
-    <!-- Address -->
-    <!-- Map Embed -->
-    <!-- WhatsApp -->
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Contact</span>
+        </nav>
+        <h1>Contact Us</h1>
+        <p>Schedule a confidential consultation with one of our attorneys.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="sr-only" id="contact-heading">Contact information and form</h2>
+
+        <div class="contact-grid">
+
+          <!-- Info column -->
+          <div class="contact-info">
+
+            <div class="contact-info-block">
+              <h2 class="contact-info-title">Get in Touch</h2>
+              <p>
+                We welcome inquiries from businesses and individuals seeking
+                corporate legal counsel. All consultations are strictly
+                confidential.
+              </p>
+            </div>
+
+            <ul class="contact-details" role="list">
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="ph ph-map-pin"></i>
+                </div>
+                <div>
+                  <p class="contact-detail-label">Office Address</p>
+                  <address style="font-style: normal;">
+                    350 Fifth Avenue, Suite 4200<br />
+                    New York, NY 10118<br />
+                    United States
+                  </address>
+                </div>
+              </li>
+
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="ph ph-phone"></i>
+                </div>
+                <div>
+                  <p class="contact-detail-label">Phone</p>
+                  <a href="tel:+12125550100" class="contact-detail-value">+1 (212) 555-0100</a>
+                </div>
+              </li>
+
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="ph ph-envelope"></i>
+                </div>
+                <div>
+                  <p class="contact-detail-label">Email</p>
+                  <a href="mailto:contact@langfordlaw.com" class="contact-detail-value">contact@langfordlaw.com</a>
+                </div>
+              </li>
+
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="ph ph-clock"></i>
+                </div>
+                <div>
+                  <p class="contact-detail-label">Office Hours</p>
+                  <p class="contact-detail-value">Monday – Friday: 9:00 AM – 6:00 PM</p>
+                  <p class="contact-detail-value" style="font-size:.85rem;">Emergency consultations available on request.</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Map embed placeholder -->
+            <div class="contact-map" role="img" aria-label="Office location map — 350 Fifth Avenue, New York, NY">
+              <iframe
+                title="Langford & Associates office location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291231!2d-73.98565068459418!3d40.74844104338218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0xaca05ca48ab5b895!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+                width="100%"
+                height="220"
+                style="border:0; border-radius: var(--radius-md);"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+          </div>
+
+          <!-- Form column -->
+          <div class="contact-form-wrap">
+
+            <!-- Success message (hidden by default) -->
+            <div
+              id="form-success"
+              class="form-success"
+              role="alert"
+              aria-live="polite"
+              aria-atomic="true"
+              hidden
+            >
+              <i class="ph ph-check-circle" aria-hidden="true"></i>
+              <div>
+                <p class="form-success-title">Message Sent Successfully!</p>
+                <p>Thank you for reaching out. One of our attorneys will contact you within 1 business day to schedule your consultation.</p>
+              </div>
+            </div>
+
+            <form
+              id="contact-form"
+              class="contact-form"
+              novalidate
+              aria-label="Consultation request form"
+            >
+              <h2 class="contact-form-title">Schedule a Consultation</h2>
+              <p class="contact-form-note">
+                Fields marked with <span aria-hidden="true">*</span>
+                <span class="sr-only">an asterisk</span> are required.
+              </p>
+
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="name" class="form-label">
+                  Full Name <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="name-error"
+                  placeholder="e.g. John Smith"
+                />
+                <span id="name-error" class="form-error" aria-live="polite" hidden></span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Email Address <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="email-error"
+                  placeholder="e.g. john@company.com"
+                />
+                <span id="email-error" class="form-error" aria-live="polite" hidden></span>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  autocomplete="tel"
+                  aria-describedby="phone-hint phone-error"
+                  placeholder="e.g. +1 (212) 555-0100"
+                />
+                <span id="phone-hint" class="form-hint">Optional — we may use this to confirm your appointment.</span>
+                <span id="phone-error" class="form-error" aria-live="polite" hidden></span>
+              </div>
+
+              <!-- Practice Area -->
+              <div class="form-group">
+                <label for="area" class="form-label">
+                  Practice Area <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-select-wrap">
+                  <select
+                    id="area"
+                    name="area"
+                    class="form-input form-select"
+                    aria-required="true"
+                    aria-describedby="area-error"
+                  >
+                    <option value="">— Select a practice area —</option>
+                    <option value="corporate">Corporate Law</option>
+                    <option value="ma">Mergers &amp; Acquisitions</option>
+                    <option value="contracts">Contracts &amp; Agreements</option>
+                    <option value="litigation">Litigation &amp; Dispute Resolution</option>
+                    <option value="compliance">Compliance &amp; Regulation</option>
+                    <option value="ip">Intellectual Property</option>
+                    <option value="other">Other / Not Sure</option>
+                  </select>
+                  <i class="ph ph-caret-down form-select-icon" aria-hidden="true"></i>
+                </div>
+                <span id="area-error" class="form-error" aria-live="polite" hidden></span>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message" class="form-label">
+                  How Can We Help? <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  rows="5"
+                  aria-required="true"
+                  aria-describedby="message-hint message-error"
+                  placeholder="Briefly describe your legal matter..."
+                ></textarea>
+                <span id="message-hint" class="form-hint">Minimum 20 characters. All information is strictly confidential.</span>
+                <span id="message-error" class="form-error" aria-live="polite" hidden></span>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn-primary contact-submit" id="submit-btn">
+                <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer id="site-footer" class="site-footer" role="contentinfo"></footer>
