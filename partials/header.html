@@ -1,6 +1,6 @@
 <div class="container header-inner">
 
-  <a href="index.html" class="logo" aria-label="Langford & Associates — Home">
+  <a href="index.html" class="logo" aria-label="Langford & Associates — Home" data-i18n-attr="aria-label:footer.logoAriaLabel">
     <span class="logo-name">Langford &amp; Associates</span>
     <span class="logo-tagline">Corporate Law</span>
   </a>
@@ -10,20 +10,26 @@
     aria-controls="site-nav"
     aria-expanded="false"
     aria-label="Open navigation menu"
+    data-i18n-attr="aria-label:nav.toggleAriaLabel"
   >
     <span></span>
     <span></span>
     <span></span>
   </button>
 
-  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation" data-i18n-attr="aria-label:nav.ariaLabel">
     <ul class="nav-list" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="practice-areas.html">Practice Areas</a></li>
-      <li><a href="blog.html">Insights</a></li>
-      <li><a href="contact.html" class="btn btn-outline">Contact Us</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="practice-areas.html" data-i18n="nav.practiceAreas">Practice Areas</a></li>
+      <li><a href="blog.html" data-i18n="nav.insights">Insights</a></li>
+      <li><a href="contact.html" class="btn btn-outline" data-i18n="nav.contactUs">Contact Us</a></li>
     </ul>
   </nav>
+
+  <div class="lang-switcher" role="group" aria-label="Language / Idioma" data-i18n-attr="aria-label:langSwitcher.ariaLabel">
+    <button class="lang-btn" data-lang="en-us" aria-pressed="true" title="English">&#x1F1FA;&#x1F1F8;</button>
+    <button class="lang-btn" data-lang="pt-br" aria-pressed="false" title="Português">&#x1F1E7;&#x1F1F7;</button>
+  </div>
 
 </div>

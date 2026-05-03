@@ -36,7 +36,9 @@ function initMobileNav() {
     navToggle.setAttribute('aria-expanded', String(!isOpen));
     navToggle.setAttribute(
       'aria-label',
-      isOpen ? 'Open navigation menu' : 'Close navigation menu'
+      isOpen
+        ? (typeof getTranslation === 'function' ? getTranslation('nav.toggleAriaLabel') : 'Open navigation menu')
+        : (typeof getTranslation === 'function' ? getTranslation('nav.toggleAriaLabel') : 'Close navigation menu')
     );
     siteNav.classList.toggle('is-open', !isOpen);
   });
@@ -44,7 +46,7 @@ function initMobileNav() {
   siteNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open navigation menu');
+      navToggle.setAttribute('aria-label', typeof getTranslation === 'function' ? getTranslation('nav.toggleAriaLabel') : 'Open navigation menu');
       siteNav.classList.remove('is-open');
     });
   });
@@ -52,7 +54,7 @@ function initMobileNav() {
   document.addEventListener('click', (e) => {
     if (!siteNav.contains(e.target) && !navToggle.contains(e.target)) {
       navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open navigation menu');
+      navToggle.setAttribute('aria-label', typeof getTranslation === 'function' ? getTranslation('nav.toggleAriaLabel') : 'Open navigation menu');
       siteNav.classList.remove('is-open');
     }
   });
@@ -60,7 +62,7 @@ function initMobileNav() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && siteNav.classList.contains('is-open')) {
       navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open navigation menu');
+      navToggle.setAttribute('aria-label', typeof getTranslation === 'function' ? getTranslation('nav.toggleAriaLabel') : 'Open navigation menu');
       siteNav.classList.remove('is-open');
       navToggle.focus();
     }
@@ -106,11 +108,11 @@ function initContactForm() {
     const errorEl = document.getElementById('name-error');
     const val     = input.value.trim();
     if (!val) {
-      showError(input, errorEl, 'Full name is required.');
+      showError(input, errorEl, getTranslation('validation.nameRequired'));
       return false;
     }
     if (val.length < 2) {
-      showError(input, errorEl, 'Please enter your full name (at least 2 characters).');
+      showError(input, errorEl, getTranslation('validation.nameTooShort'));
       return false;
     }
     clearError(input, errorEl);
@@ -122,11 +124,11 @@ function initContactForm() {
     const errorEl = document.getElementById('email-error');
     const val     = input.value.trim();
     if (!val) {
-      showError(input, errorEl, 'Email address is required.');
+      showError(input, errorEl, getTranslation('validation.emailRequired'));
       return false;
     }
     if (!isValidEmail(val)) {
-      showError(input, errorEl, 'Please enter a valid email address (e.g. name@company.com).');
+      showError(input, errorEl, getTranslation('validation.emailInvalid'));
       return false;
     }
     clearError(input, errorEl);
@@ -139,7 +141,7 @@ function initContactForm() {
     const val     = input.value.trim();
     // Phone is optional — only validate format if filled
     if (val && !/^[\d\s\+\-\(\)]{7,20}$/.test(val)) {
-      showError(input, errorEl, 'Please enter a valid phone number.');
+      showError(input, errorEl, getTranslation('validation.phoneInvalid'));
       return false;
     }
     // Don't mark as "valid" (green) when empty — it's optional
@@ -157,7 +159,7 @@ function initContactForm() {
     const input   = document.getElementById('area');
     const errorEl = document.getElementById('area-error');
     if (!input.value) {
-      showError(input, errorEl, 'Please select a practice area.');
+      showError(input, errorEl, getTranslation('validation.areaRequired'));
       return false;
     }
     clearError(input, errorEl);
@@ -169,11 +171,11 @@ function initContactForm() {
     const errorEl = document.getElementById('message-error');
     const val     = input.value.trim();
     if (!val) {
-      showError(input, errorEl, 'Please describe your legal matter.');
+      showError(input, errorEl, getTranslation('validation.messageRequired'));
       return false;
     }
     if (val.length < 20) {
-      showError(input, errorEl, `Please provide more detail (${val.length}/20 characters minimum).`);
+      showError(input, errorEl, getTranslation('validation.messageTooShort', { count: val.length }));
       return false;
     }
     clearError(input, errorEl);
@@ -209,7 +211,7 @@ function initContactForm() {
     // Simulate submission — show success message
     const submitBtn = document.getElementById('submit-btn');
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="ph ph-spinner" aria-hidden="true"></i> Sending…';
+    submitBtn.innerHTML = `<i class="ph ph-spinner" aria-hidden="true"></i> ${getTranslation('contact.submittingBtn')}`;
 
     setTimeout(() => {
       form.hidden = true;
@@ -231,6 +233,7 @@ async function init() {
   initMobileNav();
   setFooterYear();
   initContactForm();
+  await initI18n();
 }
 
 init();

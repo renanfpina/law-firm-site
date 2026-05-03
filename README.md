@@ -1,6 +1,6 @@
 # Langford & Associates — Law Firm Website
 
-A responsive, multi-page website for a fictional corporate law firm, built with vanilla HTML, CSS, and JavaScript.
+A responsive, accessible, multi-page website for a corporate law firm, built with vanilla HTML, CSS, and JavaScript.
 
 **Live site:** [https://renanfpina.github.io/law-firm-site/](https://renanfpina.github.io/law-firm-site/)
 
@@ -8,7 +8,7 @@ A responsive, multi-page website for a fictional corporate law firm, built with 
 
 ## About
 
-**Langford & Associates** is a fictitious law firm specializing in Corporate Law. The design follows a sophisticated, premium, and corporate aesthetic — dark header/hero with light inner sections.
+**Langford & Associates** is a law firm specializing in Corporate Law. The design follows a sophisticated, premium, and corporate aesthetic — dark header/hero with light inner sections.
 
 ### Visual Identity
 
@@ -91,3 +91,12 @@ law-firm-site/
 | `assets/images/team/attorney-1.jpg` | Senior man in suit (Richard Langford) | Pexels |
 | `assets/images/team/attorney-2.jpg` | Professional woman (Margaret Ashford) | Pexels |
 | `assets/images/team/attorney-3.jpg` | Man with glasses (Daniel Grant) | Pexels |
+
+---
+
+## Author
+
+**Renan Pina**
+- Email: [renanfpina@gmail.com](mailto:renanfpina@gmail.com)
+- GitHub: [github.com/renanfpina](https://github.com/renanfpina)
+- LinkedIn: [linkedin.com/in/renanfpina](https://linkedin.com/in/renanfpina)

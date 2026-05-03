@@ -18,7 +18,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-i18n="skipLink">Skip to main content</a>
 
   <header id="site-header" class="site-header" role="banner"></header>
 
@@ -28,11 +28,11 @@
     <section class="page-hero" aria-label="Article introduction">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="index.html" data-i18n="blogPost.breadcrumbHome">Home</a>
           <span class="breadcrumb-sep" aria-hidden="true">/</span>
-          <a href="blog.html">Insights</a>
+          <a href="blog.html" data-i18n="blogPost.breadcrumbInsights">Insights</a>
           <span class="breadcrumb-sep" aria-hidden="true">/</span>
-          <span aria-current="page">Corporate Transparency Act</span>
+          <span aria-current="page" data-i18n="blogPost.breadcrumbCurrent">Corporate Transparency Act</span>
         </nav>
         <div class="blog-meta" style="margin-bottom: var(--space-sm);">
           <span class="blog-category">Corporate Law</span>
@@ -53,7 +53,7 @@
           />
           <div>
             <span class="blog-author-name" style="color: var(--color-bg);">Richard Langford</span>
-            <span class="blog-read-time">8 min read</span>
+            <span class="blog-read-time" data-i18n="blogPost.readTime">8 min read</span>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
         <div class="article-grid">
 
           <!-- Content -->
-          <article class="article-content" aria-label="Article content">
+<article class="article-content" aria-label="Article content" data-i18n-attr="aria-label:blogPost.articleAriaLabel">
 
             <p class="article-lead">
               The Corporate Transparency Act (CTA), enacted as part of the National
@@ -152,12 +152,12 @@
               before filing.
             </p>
 
-            <div class="article-cta" role="complementary" aria-label="Consultation call to action">
+              <div class="article-cta" role="complementary" aria-label="Consultation call to action">
               <i class="ph ph-scales" aria-hidden="true"></i>
               <div>
-                <p><strong>Need help with CTA compliance?</strong></p>
-                <p>Our corporate team is available for confidential consultations to assess your specific obligations and guide you through the filing process.</p>
-                <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                <p><strong data-i18n="blogPost.articleCtaTitle">Need help with CTA compliance?</strong></p>
+                <p data-i18n="blogPost.articleCtaText">Our corporate team is available for confidential consultations to assess your specific obligations and guide you through the filing process.</p>
+                <a href="contact.html" class="btn btn-primary" data-i18n="blogPost.articleCtaBtn">Schedule a Consultation</a>
               </div>
             </div>
 
@@ -167,7 +167,7 @@
           <aside class="article-sidebar" aria-label="Related content">
 
             <div class="sidebar-widget">
-              <h2 class="sidebar-heading">About the Author</h2>
+              <h2 class="sidebar-heading" data-i18n="blogPost.sidebarAuthorHeading">About the Author</h2>
               <div class="sidebar-author">
                 <img
                   src="assets/images/team/attorney-1.jpg"
@@ -178,19 +178,19 @@
                   loading="lazy"
                 />
                 <h3 class="sidebar-author-name">Richard Langford</h3>
-                <p class="sidebar-author-role">Managing Partner</p>
-                <p class="sidebar-author-bio">
+                <p class="sidebar-author-role" data-i18n="blogPost.sidebarAuthorRole">Managing Partner</p>
+                <p class="sidebar-author-bio" data-i18n="blogPost.sidebarAuthorBio">
                   Richard specializes in corporate law and M&amp;A with over 25 years
                   of experience advising Fortune 500 companies and emerging businesses.
                 </p>
                 <a href="about.html" class="sidebar-link">
-                  View full profile <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                  <span data-i18n="blogPost.sidebarAuthorLink">View full profile</span> <i class="ph ph-arrow-right" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
 
             <div class="sidebar-widget">
-              <h2 class="sidebar-heading">Practice Areas</h2>
+              <h2 class="sidebar-heading" data-i18n="blogPost.sidebarPracticeHeading">Practice Areas</h2>
               <ul class="sidebar-links-list" role="list">
                 <li><a href="practice-areas.html#corporate">Corporate Law</a></li>
                 <li><a href="practice-areas.html#compliance">Compliance &amp; Regulation</a></li>
@@ -200,12 +200,12 @@
             </div>
 
             <div class="sidebar-widget sidebar-widget--dark">
-              <h2 class="sidebar-heading" style="color: var(--color-gold);">Free Consultation</h2>
-              <p style="color: rgba(245,243,238,.75); font-size: .9rem;">
+              <h2 class="sidebar-heading" style="color: var(--color-gold);" data-i18n="blogPost.sidebarCtaHeading">Free Consultation</h2>
+              <p style="color: rgba(245,243,238,.75); font-size: .9rem;" data-i18n="blogPost.sidebarCtaText">
                 Have questions about your legal obligations?
                 Our attorneys are ready to help.
               </p>
-              <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-sm); width: 100%; justify-content: center;">
+              <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-sm); width: 100%; justify-content: center;" data-i18n="blogPost.sidebarCtaBtn">
                 Get in Touch
               </a>
             </div>
@@ -219,7 +219,7 @@
     <!-- MORE ARTICLES -->
     <section class="blog-more" aria-labelledby="more-heading">
       <div class="container">
-        <h2 id="more-heading">More Insights</h2>
+        <h2 id="more-heading" data-i18n="blogPost.moreTitle">More Insights</h2>
         <ul class="blog-grid grid-3" role="list">
 
           <li>
@@ -229,10 +229,10 @@
                   <span class="blog-category">M&amp;A</span>
                 </div>
                 <h3 class="blog-card-title">
-                  <a href="blog-post.html">Due Diligence Checklist for Cross-Border Acquisitions</a>
+                  <a href="blog-post.html" data-i18n="blogPost.more1Title">Due Diligence Checklist for Cross-Border Acquisitions</a>
                 </h3>
-                <a href="blog-post.html" class="blog-card-link" aria-label="Read: Due Diligence Checklist">
-                  Read <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                <a href="blog-post.html" class="blog-card-link" aria-label="Read: Due Diligence Checklist" data-i18n-attr="aria-label:blogPost.more1ReadAriaLabel">
+                  <span data-i18n="blogPost.readLink">Read</span> <i class="ph ph-arrow-right" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
@@ -245,10 +245,10 @@
                   <span class="blog-category">Compliance</span>
                 </div>
                 <h3 class="blog-card-title">
-                  <a href="blog-post.html">GDPR in 2026: Key Updates Every Global Business Should Know</a>
+                  <a href="blog-post.html" data-i18n="blogPost.more2Title">GDPR in 2026: Key Updates Every Global Business Should Know</a>
                 </h3>
-                <a href="blog-post.html" class="blog-card-link" aria-label="Read: GDPR in 2026">
-                  Read <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                <a href="blog-post.html" class="blog-card-link" aria-label="Read: GDPR in 2026" data-i18n-attr="aria-label:blogPost.more2ReadAriaLabel">
+                  <span data-i18n="blogPost.readLink">Read</span> <i class="ph ph-arrow-right" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
@@ -261,10 +261,10 @@
                   <span class="blog-category">Litigation</span>
                 </div>
                 <h3 class="blog-card-title">
-                  <a href="blog-post.html">When to Choose Arbitration Over Litigation in Commercial Disputes</a>
+                  <a href="blog-post.html" data-i18n="blogPost.more3Title">When to Choose Arbitration Over Litigation in Commercial Disputes</a>
                 </h3>
-                <a href="blog-post.html" class="blog-card-link" aria-label="Read: Arbitration vs Litigation">
-                  Read <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                <a href="blog-post.html" class="blog-card-link" aria-label="Read: Arbitration vs Litigation" data-i18n-attr="aria-label:blogPost.more3ReadAriaLabel">
+                  <span data-i18n="blogPost.readLink">Read</span> <i class="ph ph-arrow-right" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
@@ -272,7 +272,7 @@
 
         </ul>
         <div class="text-center" style="margin-top: var(--space-lg);">
-          <a href="blog.html" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);">
+          <a href="blog.html" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="blogPost.viewAllInsights">
             View All Insights
           </a>
         </div>
@@ -283,6 +283,7 @@
 
   <footer id="site-footer" class="site-footer" role="contentinfo"></footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

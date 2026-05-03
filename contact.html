@@ -18,7 +18,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-i18n="skipLink">Skip to main content</a>
 
   <header id="site-header" class="site-header" role="banner"></header>
 
@@ -28,12 +28,12 @@
     <section class="page-hero" aria-label="Page introduction">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="index.html" data-i18n="contact.breadcrumbHome">Home</a>
           <span class="breadcrumb-sep" aria-hidden="true">/</span>
-          <span aria-current="page">Contact</span>
+          <span aria-current="page" data-i18n="contact.breadcrumbCurrent">Contact</span>
         </nav>
-        <h1>Contact Us</h1>
-        <p>Schedule a confidential consultation with one of our attorneys.</p>
+        <h1 data-i18n="contact.heroTitle">Contact Us</h1>
+        <p data-i18n="contact.heroText">Schedule a confidential consultation with one of our attorneys.</p>
       </div>
     </section>
 
@@ -48,8 +48,8 @@
           <div class="contact-info">
 
             <div class="contact-info-block">
-              <h2 class="contact-info-title">Get in Touch</h2>
-              <p>
+              <h2 class="contact-info-title" data-i18n="contact.infoTitle">Get in Touch</h2>
+              <p data-i18n="contact.infoText">
                 We welcome inquiries from businesses and individuals seeking
                 corporate legal counsel. All consultations are strictly
                 confidential.
@@ -62,7 +62,7 @@
                   <i class="ph ph-map-pin"></i>
                 </div>
                 <div>
-                  <p class="contact-detail-label">Office Address</p>
+                  <p class="contact-detail-label" data-i18n="contact.addressLabel">Office Address</p>
                   <address style="font-style: normal;">
                     350 Fifth Avenue, Suite 4200<br />
                     New York, NY 10118<br />
@@ -76,7 +76,7 @@
                   <i class="ph ph-phone"></i>
                 </div>
                 <div>
-                  <p class="contact-detail-label">Phone</p>
+                  <p class="contact-detail-label" data-i18n="contact.phoneLabel">Phone</p>
                   <a href="tel:+12125550100" class="contact-detail-value">+1 (212) 555-0100</a>
                 </div>
               </li>
@@ -86,7 +86,7 @@
                   <i class="ph ph-envelope"></i>
                 </div>
                 <div>
-                  <p class="contact-detail-label">Email</p>
+                  <p class="contact-detail-label" data-i18n="contact.emailLabel">Email</p>
                   <a href="mailto:contact@langfordlaw.com" class="contact-detail-value">contact@langfordlaw.com</a>
                 </div>
               </li>
@@ -96,15 +96,20 @@
                   <i class="ph ph-clock"></i>
                 </div>
                 <div>
-                  <p class="contact-detail-label">Office Hours</p>
-                  <p class="contact-detail-value">Monday – Friday: 9:00 AM – 6:00 PM</p>
-                  <p class="contact-detail-value" style="font-size:.85rem;">Emergency consultations available on request.</p>
+                  <p class="contact-detail-label" data-i18n="contact.hoursLabel">Office Hours</p>
+                  <p class="contact-detail-value" data-i18n="contact.hoursValue">Monday – Friday: 9:00 AM – 6:00 PM</p>
+                  <p class="contact-detail-value" style="font-size:.85rem;" data-i18n="contact.hoursNote">Emergency consultations available on request.</p>
                 </div>
               </li>
             </ul>
 
             <!-- Map embed placeholder -->
-            <div class="contact-map" role="img" aria-label="Office location map — 350 Fifth Avenue, New York, NY">
+            <div
+              class="contact-map"
+              role="img"
+              aria-label="Office location map — 350 Fifth Avenue, New York, NY"
+              data-i18n-attr="aria-label:contact.mapAriaLabel"
+            >
               <iframe
                 title="Langford & Associates office location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291231!2d-73.98565068459418!3d40.74844104338218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0xaca05ca48ab5b895!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
@@ -133,8 +138,8 @@
             >
               <i class="ph ph-check-circle" aria-hidden="true"></i>
               <div>
-                <p class="form-success-title">Message Sent Successfully!</p>
-                <p>Thank you for reaching out. One of our attorneys will contact you within 1 business day to schedule your consultation.</p>
+              <p class="form-success-title" data-i18n="contact.successTitle">Message Sent Successfully!</p>
+              <p data-i18n="contact.successText">Thank you for reaching out. One of our attorneys will contact you within 1 business day to schedule your consultation.</p>
               </div>
             </div>
 
@@ -143,16 +148,17 @@
               class="contact-form"
               novalidate
               aria-label="Consultation request form"
+              data-i18n-attr="aria-label:contact.formAriaLabel"
             >
-              <h2 class="contact-form-title">Schedule a Consultation</h2>
+              <h2 class="contact-form-title" data-i18n="contact.formTitle">Schedule a Consultation</h2>
               <p class="contact-form-note">
-                Fields marked with <span aria-hidden="true">*</span>
-                <span class="sr-only">an asterisk</span> are required.
+                <span data-i18n="contact.formRequiredNote">Fields marked with</span> <span aria-hidden="true">*</span>
+                <span class="sr-only" data-i18n="contact.formRequiredNoteScreen">an asterisk</span> <span data-i18n="contact.formRequiredNoteSuffix">are required.</span>
               </p>
 
               <!-- Full Name -->
               <div class="form-group">
-                <label for="name" class="form-label">
+                <label for="name" class="form-label" data-i18n="contact.nameLabel">
                   Full Name <span class="form-required" aria-hidden="true">*</span>
                 </label>
                 <input
@@ -164,13 +170,14 @@
                   aria-required="true"
                   aria-describedby="name-error"
                   placeholder="e.g. John Smith"
+                  data-i18n-attr="placeholder:contact.namePlaceholder"
                 />
                 <span id="name-error" class="form-error" aria-live="polite" hidden></span>
               </div>
 
               <!-- Email -->
               <div class="form-group">
-                <label for="email" class="form-label">
+                <label for="email" class="form-label" data-i18n="contact.emailLabel2">
                   Email Address <span class="form-required" aria-hidden="true">*</span>
                 </label>
                 <input
@@ -182,13 +189,14 @@
                   aria-required="true"
                   aria-describedby="email-error"
                   placeholder="e.g. john@company.com"
+                  data-i18n-attr="placeholder:contact.emailPlaceholder"
                 />
                 <span id="email-error" class="form-error" aria-live="polite" hidden></span>
               </div>
 
               <!-- Phone -->
               <div class="form-group">
-                <label for="phone" class="form-label">Phone Number</label>
+                <label for="phone" class="form-label" data-i18n="contact.phoneLabel2">Phone Number</label>
                 <input
                   type="tel"
                   id="phone"
@@ -197,14 +205,15 @@
                   autocomplete="tel"
                   aria-describedby="phone-hint phone-error"
                   placeholder="e.g. +1 (212) 555-0100"
+                  data-i18n-attr="placeholder:contact.phonePlaceholder"
                 />
-                <span id="phone-hint" class="form-hint">Optional — we may use this to confirm your appointment.</span>
+                <span id="phone-hint" class="form-hint" data-i18n="contact.phoneHint">Optional — we may use this to confirm your appointment.</span>
                 <span id="phone-error" class="form-error" aria-live="polite" hidden></span>
               </div>
 
               <!-- Practice Area -->
               <div class="form-group">
-                <label for="area" class="form-label">
+                <label for="area" class="form-label" data-i18n="contact.areaLabel">
                   Practice Area <span class="form-required" aria-hidden="true">*</span>
                 </label>
                 <div class="form-select-wrap">
@@ -215,14 +224,14 @@
                     aria-required="true"
                     aria-describedby="area-error"
                   >
-                    <option value="">— Select a practice area —</option>
-                    <option value="corporate">Corporate Law</option>
-                    <option value="ma">Mergers &amp; Acquisitions</option>
-                    <option value="contracts">Contracts &amp; Agreements</option>
-                    <option value="litigation">Litigation &amp; Dispute Resolution</option>
-                    <option value="compliance">Compliance &amp; Regulation</option>
-                    <option value="ip">Intellectual Property</option>
-                    <option value="other">Other / Not Sure</option>
+                    <option value="" data-i18n="contact.areaDefault">— Select a practice area —</option>
+                    <option value="corporate" data-i18n="contact.areaCorporate">Corporate Law</option>
+                    <option value="ma" data-i18n="contact.areaMA">Mergers &amp; Acquisitions</option>
+                    <option value="contracts" data-i18n="contact.areaContracts">Contracts &amp; Agreements</option>
+                    <option value="litigation" data-i18n="contact.areaLitigation">Litigation &amp; Dispute Resolution</option>
+                    <option value="compliance" data-i18n="contact.areaCompliance">Compliance &amp; Regulation</option>
+                    <option value="ip" data-i18n="contact.areaIP">Intellectual Property</option>
+                    <option value="other" data-i18n="contact.areaOther">Other / Not Sure</option>
                   </select>
                   <i class="ph ph-caret-down form-select-icon" aria-hidden="true"></i>
                 </div>
@@ -231,7 +240,7 @@
 
               <!-- Message -->
               <div class="form-group">
-                <label for="message" class="form-label">
+                <label for="message" class="form-label" data-i18n="contact.messageLabel">
                   How Can We Help? <span class="form-required" aria-hidden="true">*</span>
                 </label>
                 <textarea
@@ -242,13 +251,14 @@
                   aria-required="true"
                   aria-describedby="message-hint message-error"
                   placeholder="Briefly describe your legal matter..."
+                  data-i18n-attr="placeholder:contact.messagePlaceholder"
                 ></textarea>
-                <span id="message-hint" class="form-hint">Minimum 20 characters. All information is strictly confidential.</span>
+                <span id="message-hint" class="form-hint" data-i18n="contact.messageHint">Minimum 20 characters. All information is strictly confidential.</span>
                 <span id="message-error" class="form-error" aria-live="polite" hidden></span>
               </div>
 
               <!-- Submit -->
-              <button type="submit" class="btn btn-primary contact-submit" id="submit-btn">
+              <button type="submit" class="btn btn-primary contact-submit" id="submit-btn" data-i18n="contact.submitBtn">
                 <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
                 Send Message
               </button>
@@ -264,6 +274,7 @@
 
   <footer id="site-footer" class="site-footer" role="contentinfo"></footer>
 
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
