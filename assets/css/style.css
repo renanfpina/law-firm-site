@@ -1790,6 +1790,18 @@ address p {
     display: flex;
   }
 
+  .logo {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .logo-name {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .site-nav {
     position: absolute;
     top: 72px;
@@ -1832,12 +1844,8 @@ address p {
   }
 
   .lang-switcher {
-    margin-left: 0;
-    margin-top: var(--space-xs);
-    padding-top: var(--space-xs);
-    border-top: 1px solid var(--color-primary-light);
-    width: 100%;
-    justify-content: flex-start;
+    margin-left: var(--space-xs);
+    flex-shrink: 0;
   }
 
   .hero-actions {
