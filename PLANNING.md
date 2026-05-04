@@ -67,6 +67,20 @@ Hospedagem prevista no **GitHub Pages**.
 - `setFooterYear()` — ano dinâmico no footer
 - `initContactForm()` — validação de formulário com ARIA live regions
 
+#### Internacionalização (`assets/js/i18n.js`)
+
+Suporte a múltiplos idiomas via arquivos JSON, sem dependências externas.
+
+| Item | Detalhe |
+|---|---|
+| Idiomas disponíveis | Inglês (`en-us`) e Português Brasil (`pt-br`) |
+| Arquivos de tradução | `assets/i18n/en-us.json`, `assets/i18n/pt-br.json` |
+| Seleção de idioma | Botões com bandeiras no header (🇺🇸 / 🇧🇷), persistidos via `localStorage` |
+| Tradução de texto | Atributo `data-i18n="chave"` nos elementos HTML |
+| Tradução de atributos | Atributo `data-i18n-attr="atributo:chave"` (ex: `aria-label`, `placeholder`) |
+| Idioma padrão | `en-us` (detectado automaticamente pelo navegador) |
+| Escopo | Todas as 6 páginas + partials de header e footer |
+
 ---
 
 ### Site 2 — Escola de Idiomas (`language-school/`)

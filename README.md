@@ -56,6 +56,20 @@ A responsive, accessible, multi-page website for a corporate law firm, built wit
 - `setFooterYear()` — dynamic year in the footer
 - `initContactForm()` — form validation with ARIA live regions
 
+### Internationalization (`assets/js/i18n.js`)
+
+Full multi-language support with no external libraries.
+
+| Feature | Detail |
+|---------|--------|
+| Languages | English (`en-us`) and Brazilian Portuguese (`pt-br`) |
+| Translation files | `assets/i18n/en-us.json`, `assets/i18n/pt-br.json` |
+| Language switcher | Flag buttons in the header (🇺🇸 / 🇧🇷), persisted via `localStorage` |
+| Text translation | `data-i18n="key"` attribute on HTML elements |
+| Attribute translation | `data-i18n-attr="attribute:key"` (e.g. `aria-label`, `placeholder`) |
+| Default language | `en-us` (auto-detected from browser preference) |
+| Coverage | All 6 pages, header and footer partials |
+
 ---
 
 ## Project Structure
@@ -74,8 +88,12 @@ law-firm-site/
 └── assets/
     ├── css/
     │   └── style.css
+    ├── i18n/
+    │   ├── en-us.json
+    │   └── pt-br.json
     ├── js/
-    │   └── main.js
+    │   ├── main.js
+    │   └── i18n.js
     └── images/
         ├── hero/
         └── team/
